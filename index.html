@@ -54,26 +54,17 @@
             font-size: 14px;
             margin-bottom: 30px;
         }
-        .lang-toggle {
+        .lang-bar {
             text-align: right;
             margin-bottom: 20px;
         }
-        .lang-toggle button {
-            padding: 8px 16px;
+        .lang-bar select {
+            padding: 8px 12px;
             border: 1px solid #ddd;
             border-radius: 6px;
-            background: #fff;
-            cursor: pointer;
             font-size: 14px;
-            margin-left: 8px;
+            background: #fff;
         }
-        .lang-toggle button.active {
-            background: #1A1A2E;
-            color: #fff;
-            border-color: #1A1A2E;
-        }
-        .section { display: none; }
-        .section.active { display: block; }
         .contact-box {
             background: #f0f0f5;
             padding: 16px;
@@ -84,13 +75,43 @@
 </head>
 <body>
     <div class="container">
-        <div class="lang-toggle">
-            <button id="btn-ko" class="active" onclick="switchLang('ko')">한국어</button>
-            <button id="btn-en" onclick="switchLang('en')">English</button>
+        <div class="lang-bar">
+            <select onchange="if(this.value)window.location.href=this.value">
+                <option value="">🌐 Language</option>
+                <option value="index.html">한국어</option>
+                <option value="en.html">English</option>
+                <option value="fr.html">Français</option>
+                <option value="de.html">Deutsch</option>
+                <option value="it.html">Italiano</option>
+                <option value="es.html">Español</option>
+                <option value="pt.html">Português</option>
+                <option value="ja.html">日本語</option>
+                <option value="zh.html">中文</option>
+                <option value="ru.html">Русский</option>
+                <option value="ar.html">العربية</option>
+                <option value="hi.html">हिन्दी</option>
+                <option value="th.html">ไทย</option>
+                <option value="vi.html">Tiếng Việt</option>
+                <option value="id.html">Bahasa Indonesia</option>
+                <option value="ms.html">Bahasa Melayu</option>
+                <option value="tr.html">Türkçe</option>
+                <option value="nl.html">Nederlands</option>
+                <option value="pl.html">Polski</option>
+                <option value="sv.html">Svenska</option>
+                <option value="no.html">Norsk</option>
+                <option value="da.html">Dansk</option>
+                <option value="fi.html">Suomi</option>
+                <option value="cs.html">Čeština</option>
+                <option value="hu.html">Magyar</option>
+                <option value="ro.html">Română</option>
+                <option value="el.html">Ελληνικά</option>
+                <option value="he.html">עברית</option>
+                <option value="tl.html">Filipino</option>
+                <option value="uk.html">Українська</option>
+            </select>
         </div>
 
-        <!-- Korean Version -->
-        <div id="ko" class="section active">
+        <div>
             <h1>개인정보처리방침</h1>
             <p class="date">시행일: 2026년 3월 13일 | 최종 수정: 2026년 3월 13일</p>
 
@@ -166,93 +187,6 @@
                 <p><strong>이메일:</strong> zumoai.help@gmail.com</p>
             </div>
         </div>
-
-        <!-- English Version -->
-        <div id="en" class="section">
-            <h1>Privacy Policy</h1>
-            <p class="date">Effective Date: March 13, 2026 | Last Updated: March 13, 2026</p>
-
-            <p><strong>Zumo</strong> ("the App") values your privacy and is committed to protecting your personal information. This Privacy Policy explains what information we collect, how we use it, and how we protect it.</p>
-
-            <h2>1. Information We Collect</h2>
-            <h3>1.1 Information You Provide</h3>
-            <ul>
-                <li><strong>Chat Text:</strong> Conversation text you paste or type for analysis</li>
-                <li><strong>Screenshot Images:</strong> Chat screenshots you upload for conversation analysis</li>
-            </ul>
-            <h3>1.2 Automatically Collected Information</h3>
-            <ul>
-                <li><strong>Device Information:</strong> Device type, operating system version, app version</li>
-                <li><strong>Usage Data:</strong> App launch times, feature usage frequency</li>
-                <li><strong>Purchase Information:</strong> Subscription status and purchase history (actual payment details are processed by Google Play / Apple App Store and are not collected by the App)</li>
-            </ul>
-            <h3>1.3 Information We Do NOT Collect</h3>
-            <ul>
-                <li>Personal identifiers such as name, email, or phone number</li>
-                <li>Location data</li>
-                <li>Contacts or call logs</li>
-                <li>Financial information such as credit card numbers (payments are handled through app stores)</li>
-            </ul>
-
-            <h2>2. How We Use Your Information</h2>
-            <ul>
-                <li><strong>Service Delivery:</strong> Providing core features including chat analysis, interest scoring, and reply suggestions</li>
-                <li><strong>Service Improvement:</strong> Optimizing app performance and enhancing user experience</li>
-                <li><strong>Subscription Management:</strong> Verifying access to premium features</li>
-            </ul>
-
-            <h2>3. Data Retention</h2>
-            <ul>
-                <li><strong>Chat Text & Screenshots:</strong> Not stored on our servers. Data is deleted immediately after AI analysis is complete. Only analysis results are displayed on your device.</li>
-                <li><strong>Usage Data:</strong> Retained during the service operation period and deleted promptly upon account deletion or service termination.</li>
-                <li><strong>Payment Records:</strong> Retained for 5 years in accordance with applicable e-commerce laws.</li>
-            </ul>
-
-            <h2>4. Third-Party Sharing</h2>
-            <p>We do not sell or share your personal information with third parties except in the following cases:</p>
-            <ul>
-                <li><strong>AI Analysis:</strong> Chat text is sent to OpenAI API for conversation analysis. Transmitted data is used solely for analysis purposes and is handled in accordance with OpenAI's privacy policy.</li>
-                <li><strong>Payment Processing:</strong> Subscription payments are processed through Google Play, Apple App Store, and RevenueCat.</li>
-                <li><strong>Legal Requirements:</strong> When required by applicable law</li>
-            </ul>
-
-            <h2>5. Data Security</h2>
-            <ul>
-                <li>HTTPS (SSL/TLS) encryption for all data transmission</li>
-                <li>Restricted server access and management</li>
-                <li>No-storage policy for chat data (deleted immediately after analysis)</li>
-            </ul>
-
-            <h2>6. Your Rights</h2>
-            <p>You may exercise the following rights at any time:</p>
-            <ul>
-                <li>Withdraw consent for data processing</li>
-                <li>Request access to, correction of, or deletion of your personal data</li>
-                <li>Remove all local data by uninstalling the App</li>
-            </ul>
-
-            <h2>7. Children's Privacy</h2>
-            <p>This App is not intended for use by children under the age of 14. We do not knowingly collect personal information from children under 14. If we become aware that we have collected personal information from a child under 14, we will take steps to delete such information promptly.</p>
-
-            <h2>8. Changes to This Policy</h2>
-            <p>This Privacy Policy may be updated to reflect changes in laws or our services. Any changes will be communicated through in-app notices or on this page.</p>
-
-            <h2>9. Contact Us</h2>
-            <div class="contact-box">
-                <p><strong>App Name:</strong> Zumo</p>
-                <p><strong>Developer:</strong> Zumo AI</p>
-                <p><strong>Email:</strong> zumoai.help@gmail.com</p>
-            </div>
-        </div>
     </div>
-
-    <script>
-        function switchLang(lang) {
-            document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.lang-toggle button').forEach(el => el.classList.remove('active'));
-            document.getElementById(lang).classList.add('active');
-            document.getElementById('btn-' + lang).classList.add('active');
-        }
-    </script>
 </body>
 </html>
